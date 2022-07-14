@@ -1,0 +1,390 @@
+select * from employees e ;
+
+select * from departments d ;
+
+select * from jobs j ;
+
+select * from locations l ;
+
+select * from countries c;
+
+--Where
+
+select first_name as "FirstName" , salary ,manager_id from employees e ;
+
+select * from employees e where salary > 30000;
+
+--And, Or, Not, In, Not in , null , between 
+
+select * from employees e where salary > 10000 and manager_id = 110;
+select * from employees e where salary > 10000 or manager_id = 110;
+select * from employees e where salary between 10000 and 20000;
+select * from employees where job_id = 'IT_PROG' ;
+select * from employees e where first_name like 'A%';
+select * from employees e where first_name like '_a%';
+select * from employees e where first_name like '%a%';
+select * from employees e where first_name like '%a';
+select * from employees e where job_id ='AD_PRES' or job_id = 'PU_CLERK';
+select * from employees e where job_id in ('IT_PROG', 'AD_PRESS', 'PU_CLERK');
+select * from employees e where job_id not in ('IT_PROG', 'AD_PRES', 'PU_CLERK');
+
+--print all employees who have not been allocated to a manager
+select * from employees e where manager_id is null ;
+--select all employees who have report to manager 103
+select * from employees e where manager_id = 103;
+--print all employees who arer getting paid more than 10000 and works in dept 60
+select * from employees where salary > 10000  department_id = 60;
+--select all employees who's last name starts with L
+select * from employees e where last_name like 'L%';
+--select all employees who were hired after 25-06-05
+select first_name, last_name, hire_date from employees e where hire_date like '%06' or hire_date like '%07';       
+
+--distinct
+
+select distinct department_id from employees e ;
+
+select first_name, salary, salary *12 AnualSalary from employees e order by AnualSalary DESC;
+
+select first_name, salary from employees e order by salary, first_name;
+
+select first_name, salary from employees e order by 1;
+
+select first_name, hire_date from employees e order by RIGHT(hire_date, 2) desc;
+select upper('Tufail');
+select lower('AHMED'); 
+
+select * from employees e where lower(first_name) = 'steven';
+select * from employees e where upper(first_name) = 'NEENA'
+select * from employees e where 
+
+--create column that says "first_name's SALARY is x per year"
+
+select upper(concat(first_name, ''' salary is ', salary*12, ' dollars per year.')) as stdout from employees e ;
+
+select current_date;
+select current_time, current_date;
+
+--Agregate functions
+select count(*) from employees e ;
+select count(commission_pct) from employees e;
+select max(salary), min(salary), sum(salary) from employees e;
+
+select max(first_name) from employees e;
+select min(first_name) from employees e;
+select max(RIGHT(hire_date,8)) from employees e;
+
+select count(distinct department_id) from employees e;
+
+--find max salary in each dept
+select max(salary), department_id from employees e 
+group by department_id 
+order by max desc;
+
+================Important 
+--count number of employees reporting to each manager
+select manager_id , count(employee_id) as "employees" from employees e 
+group by manager_id 
+order by employees desc; 
+--count number of employees in each department
+select department_id, count(employee_Id) as "employees" from employees e where department_id is not null group by department_id order by employees desc;
+
+select department_id, job_id, sum(salary) from employees e where department_id > 40
+group by job_id, department_id 
+order by department_id ;
+
+--count number of employees per manager and only managers with 6 or more employees
+select manager_id, count(employee_id) as "employees" from employees e 
+group by manager_id
+having count(employee_id) >= 6
+order by employees desc;
+
+--joins
+
+select * from employees e;
+select * from departments d; 
+
+select first_name , salary , department_name from employees e 
+join departments d on e.department_id = d.department_id
+order by salary desc;
+
+select first_name, department_name from employees e natural join departments d ;
+
+select department_name, city from departments d2 natural join locations l ;
+
+select * from locations;
+
+select first_name, department_name, city from employees e inner join departments d 
+on e.department_id = d.department_id 
+inner join locations l on d.location_id  = l.location_id ;
+
+--using
+
+select e.first_name, e.employee_id, e.salary, d.department_name from employees e
+join departments d using (department_id);
+
+select e.first_name, e.employee_id, e.salary, d.department_name from employees e join departments d
+on e.employee_id = d.manager_id ;
+
+select first_name, salary, department_name, city from employees e 
+join departments d on e.employee_id = d.manager_id  
+join locations l on l.location_id = d.location_id 
+and d.manager_id = 100
+order by salary desc;
+
+select first_name, salary, department_name, city from employees e 
+join departments d on e.department_id  = d.department_id  
+join locations l on l.location_id = d.location_id 
+order by salary desc;
+
+--self join
+select man.first_name || ' reports to ' || emp.first_name from employees emp 
+join employees man on emp.employee_id = man.manager_id;
+
+--outer join
+
+select first_name, salary, department_name, city from employees e 
+join departments d on e.department_id = d.department_id 
+join locations l on l.location_id = d.location_id
+
+select * from employees e where department_id is null;
+
+select * from employees e where manager_id is null ;
+
+--left join
+
+select first_name ,salary ,department_name from employees e 
+left outer join departments d on e.department_id = d.department_id ;
+
+--right join
+
+select first_name, salary, department_name from employees e 
+right outer join departments d on e.department_id = d.department_id ;
+
+
+--full join
+select first_name, salary, department_name from employees e 
+full outer join departments d on e.department_id = d.department_id ;
+
+------sub queries
+-- who is getting paid more than Neena
+select salary from employees e  where first_name = 'Neena';
+select first_name from employees e where salary > 17000;
+
+select hire_date from employees e where first_name ='Neena';
+select first_name from employees e where hire_date = (select hire_date from employees e where first_name = 'Neena');
+--more than one row returned by a subquery used as an expression
+select first_name from employees e where hire_date in (select hire_date from employees e where first_name = 'Alexander');
+
+select * from employees e ;
+
+select first_name from employees e where job_id = (select job_id from employees e where first_name = 'Lex');
+
+select * from employees e where salary = (select max(salary) from employees e);
+
+----using all in mulltiple row subquery
+select employee_id, last_name, job_id, salary from employees e
+where salary < any (select salary from employees e where job_id = 'IT_PROG')
+
+----multiple column subquery
+--display employees with lowest salary in each dept
+select first_name , department_id, salary from employees e
+where (salary, department_id) in 
+(select min(salary), department_id  from employees e
+group by department_id)
+order by department_id;
+
+----set operators
+
+create table retired_employees
+as
+select * from employees e where employee_id in (108,109,110,111,112);
+
+delete from employees where employee_id in (108,109);
+
+select * from retired_employees;
+
+select count(*) from employees e ;
+
+select count(*) from retired_employees ;
+
+select * from employees union all select * from retired_employees order by employee_id ;
+
+--intersect
+select * from employees e 
+intersect
+select * from retired_employees ;
+
+--no minus operator in postgres
+
+insert into employees (employee_id, first_name, manager_id, salary) values('123445', 'buhh', '100', '10000');
+
+
+select * from employees e where first_name = 'buhh' ;
+
+update employees set salary = 29292929 where first_name = 'buhh';
+
+update employees set 
+phone_number = '123456789',
+department_id = 100,
+last_name = 'puhh'
+where first_name = 'buhh';
+
+select * from employees e where employee_id in (103,205);
+
+--delete from employees e--- deletes all data be careful
+
+--truncate (ddl)
+----empty table
+truncate table retired_employees ; --DDL faster
+delete from retired_employees ; --DML
+
+select * from retired_employees ;
+rollback;
+---
+begin;
+	update employees set
+	phone_number ='111111111',
+	department_id = 11,
+	last_name = 'nuhh'
+	where first_name = 'buhh';
+	savepoint sp1;
+commit;
+
+begin;
+	update employees set
+	phone_number ='222222222',
+	department_id = 22,
+	last_name = 'nuhh'
+	where first_name = 'buhh';
+	savepoint sp2;
+commit;
+
+begin;
+	update employees set
+	phone_number ='333333333',
+	department_id = 33,
+	last_name = 'puhh'
+	where first_name = 'buhh';
+	savepoint sp3;
+commit;
+
+select * from employees e where first_name = 'buhh';
+
+----DDL
+--create, alter, drop 
+
+create table product
+(
+		productId numeric primary key, 
+		productName char(20) unique ,
+		productFeedback char(20) check (productFeedback in ('Excellent', 'Good', 'Average')),
+		qoh numeric check (qoh > 0),
+		price numeric check (price >= 0),
+		productReview char(20) default 'Good'
+)
+
+
+select * from product;
+
+
+create table product2
+(
+		productId numeric ,
+		scanCode numeric ,
+		productName char(20) unique, 
+		productFeedback char(20) check (productFeedback in ('Excellent', 'Good', 'Average')),
+		qoh numeric check (qoh > 0),
+		price numeric check (price >= 0),
+		productReview char(20) default 'Good',
+		constraint pkpIdsCode primary key(productId, scanCode),
+		constraint checkPrFeedback check (productFeedback in ('Excellent', 'Good', 'Average'))
+)
+
+create table product2
+(
+       productId numeric ,
+       scanCode numeric ,
+       productName char(20) unique ,
+       productFeedback char(20) check (productFeedback in ('Excellent', 'Good', 'Average')),
+       qoh numeric check (qoh > 0),
+       price numeric check (price >= 0),
+       productReview  char(20) default 'Good',
+       constraint pkpIdsCode primary key(productId,scanCode),
+       constraint checkPrFeedback check ( productFeedback in ('Excellent', 'Good', 'Average'))
+)
+
+
+insert into product2 values (1,3,'pendrive1', 'Good', 100,20,default);
+
+select * from product2
+
+
+--w/o foreign key
+
+create table student
+(
+		studentId numeric primary key,
+		studentName varchar(20),
+		courseId numeric
+)
+
+create table course
+(
+		courseId numeric primary key,
+		courseName varchar(20)
+)
+
+insert into course values (1100, 'sql');
+delete from student where studentName = 'mohammad';
+
+insert into student values (120, 'mohammad', 1100);
+
+select * from student;
+
+alter table public.student add constraint fk foreign key (courseId) references public.course(courseId);
+
+
+drop table if exists director cascade;--delete tables before making them
+create table director(
+	directorId numeric primary key,
+	directorName varchar(20),
+	directorspeciality varchar(20)
+)
+
+drop table if exists movie cascade; --delete tables before making them
+create table movie(
+	movieId numeric primary key,
+	movieName varchar(20),
+	directorId numeric,
+	constraint fk foreign key(directorId) references director(directorId)
+)
+
+
+--set foreign key creating tables
+--alter table movie add constraint fk foreign key(directorId) references director(directorId);
+
+insert into director values(1,'buhh', 'movies');
+insert into director values (2,'quentin tarantulino', 'violence');
+insert into director values (3, 'luke georgios', 'making money');
+
+insert into movie values(1,'the buhhman begins', 1);
+insert into movie values (0, 'pulp fiction', 2);
+insert into movie values (-1, 'space battles', 3);
+
+alter table employees add emailID varchar(20);
+
+select * from employees e;
+
+alter table employees drop emailID;
+
+select * from employees e ;
+
+--delete from course where courseID = 1100; cannot delete while other tables reference, need to use CASCADE
+alter table student drop constraint fk;-- drop fk constraint
+alter table student add constraint fk --re add fk constraint with cascade delete specified
+foreign key(courseId) references course(courseID) 
+on delete cascade;
+
+delete from course where courseID = 1100;-- now we can delete the course with students enrolled
+
+select * from student; --students enrolled in course are also deleted.

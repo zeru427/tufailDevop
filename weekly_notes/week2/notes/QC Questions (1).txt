@@ -1,0 +1,343 @@
+Which of these is NOT an interface in JDBC? 
+A. Connection
+B. Statement
+C. PreparedStatement
+D. CallableStatement
+E. ExecutableStatement
+ANSWER: E
+
+Statement is not vulnerable to SQL injection because you can use parameterized inputs and it pre-compiles the SQL
+A. True
+B. False
+ANSWER: B
+
+When using JDBC, autocommit is set by default to be false?
+A. True
+B. False
+Answer: B
+
+Use CallableStatement to call a
+A. stored procedure
+B. Function
+C. SELECT statement
+D. none of the above
+ANSWER: A
+
+A ResultSet object has a cursor initially positioned __ the first row, and the .next()
+method can be used to iterate through the result set and returns __ when there are no more rows
+A. after; false
+B. after; true
+C. before; false
+D. before; true
+ANSWER: C
+
+Transaction management
+Which interface is responsible for transaction management? 
+A. ResultSet
+B. Connection
+C. Statement
+D. PreparedStatement
+E. CallableStatement
+ANSWER: B
+
+What does SQL stand for?
+A. Structured Question Language
+B. Standalone Query Lambdas
+C. Structured Query Language
+D. Structured Query Lambdas
+ANSWER: C
+
+What is SQL?
+A. A database for storing and maintaining state for data.
+B. A tool used solely for statistical analysis.
+C. A mentality for creating databases to be as least redundant as possible.
+D. A language for interacting with a database.
+ANSWER: D
+
+What is the primary use of DML?
+A. Houses commands that aim to create, retrieve, or delete the data within the database.
+B. Houses commands that aim to construct, change, or deconstruct the actual table structure of a database.
+C. Houses commands for maintaining state of transactions, as well as finalizing or preventing them altogether.
+D. Houses commands for specifying access rights for the data per user(s).
+ANSWER: A
+
+What is the primary use of DDL?
+A. Houses commands that aim to create, retrieve, or delete the data within the database.
+B. Houses commands that aim to construct, change, or deconstruct the actual table structure of a database.
+C. Houses commands for maintaining state of transactions, as well as finalizing or preventing them altogether.
+D. Houses commands for specifying access rights for the data per user(s).
+ANSWER: B
+
+What is the primary use of TCL?
+A. Houses commands that aim to create, retrieve, or delete the data within the database.
+B. Houses commands that aim to construct, change, or deconstruct the actual table structure of a database.
+C. Houses commands for maintaining state of transactions, as well as finalizing or preventing them altogether.
+D. Houses commands for specifying access rights for the data per user(s).
+ANSWER: C
+
+What is the primary use of DCL?
+A. Houses commands that aim to create, retrieve, or delete the data within the database.
+B. Houses commands that aim to construct, change, or deconstruct the actual table structure of a database.
+C. Houses commands for maintaining state of transactions, as well as finalizing or preventing them altogether.
+D. Houses commands for specifying access rights for the data per user(s).
+ANSWER: D
+
+What does TCL stand for?
+A. Transitional Contract Library.
+B. Transaction Control Language.
+C. Transaction Contract Language.
+D. Transform Correct Load
+E. None of the above.
+ANSWER: B
+
+Which command dictates the amount of columns we get in a given query?
+A. WHERE
+B. SELECT
+C. HAVING
+D. GROUP BY
+ANSWER: B
+
+Which command filters out records from the given query based on applying a condition to each and every record?
+A. WHERE.
+B. SELECT.
+C. HAVING.
+D. GROUP BY.
+ANSWER: A 
+
+What is the difference between WHERE and HAVING?
+A. HAVING performs a conditional check on each column to ensure datatypes are proper before a query executes, whereas WHERE applies immediately.
+B. Both can be used interchangeably, it is just a means to apply multiple filter conditions.
+C. Simply put, HAVING will ensure a specific order for the data after the WHERE clause applies, whereas WHERE by itself does not order at all.
+D. WHERE applies a condition to all records individually, whereas HAVING applies to groupings of records.
+ANSWER: D
+
+What does LIKE do (In SQL)?
+A. Increases a count by 1 showing popularity of an entity.
+B. Provides a pseudo-regular expression means for matching data through the use of wild card characters.
+C. Used in conjunction with GROUP BY in order to make sub-groupings of data..
+D. A meta-data command for creating aliases for the data..
+ANSWER: B
+
+Which one of the joins below isn't actually a join (In Oracle)?
+A. CROSS JOIN
+B. OUTER JOIN
+C. NATURAL LEFT JOIN
+D. INNER JOIN
+E. FULL OUTER JOIN
+F. All options are joins.
+ANSWER: B
+
+What is the difference between INNER JOIN and INTERSECT?
+A. INNER JOIN joins to tables together based on a matching column(s) whereas INTERSECT joins queries together based on matching entire records with each other.
+B. INNER JOIN will omit duplicates based on its join, whereas INTERSECT will still allow duplicate data to be shown.
+C. INNER JOIN occurs at compile time since it deals with already created tables, whereas INTERSECT will occur at runtime due to dealing with executed queries.
+D. INNER JOIN executes before an INTERSECT, effectively allowing for greater control over multi-join queries.
+ANSWER: A
+
+Which of the following is not a set operator in SQL?
+A. UNION ALL.
+B. UNION.
+C. MINUS.
+D. CROSS.
+E. INTERSECT
+ANSWER: D
+
+Which is NOT true about set operations in SQL?
+A. UNION ALL will allow duplicate data to be shown in query results.
+B. When performing set operations you are required to have 2 or more columns in each query in order to successfully execute.
+C. A requirement for set operations is that each query has the same datatypes in the same order, HOWEVER, they do NOT need to be named the same..
+D. One could simulate a set operation with a join clause.
+ANSWER: B
+
+What is the difference between GROUP BY and ORDER BY?
+A. GROUP BY is used to label specific grouping of data with an alias, whereas ORDER BY simple dictates how that data will be ordered..
+B. ORDER BY and GROUP BY are to be used at the same time in order to aid in how the HAVING condition is applied.
+C. ORDER BY orders data in ascending or descending order whereas GROUP BY is used group like data together for aggregation.
+D. GROUP BY is a third conditional you can apply alongside WHERE and HAVING in order to filter data further, ORDER BY simply orders the query results.
+ANSWER: C
+
+SQL is a programming language
+A. True
+B. False
+ANSWER: B
+
+What is PL/SQL?
+A. PL/SQL allows us to actually write code for SQL databases allowing for functions, stored procedures, triggers, etc.
+B. PL/SQL is a markup language extension which allows us to make more reactive databases through the user of function, triggers, stored procedures, etc.
+C. PL/SQL eliminates the need to write SQL be replacing it with an actual coding environment providing such features as functions, triggers, and stored procedures.
+D. PL/SQL is the latest version of Oracle which brought about new features such as triggers, stored procedures, functions, sequences, and much more.
+ANSWER: A
+
+Which of the following is an aggregate function?
+A. Avg()
+B. Length()
+C. Having
+D. Order By
+ANSWER: A
+
+A foreign key MUST point to the primary key of another table.
+A. True
+B. False
+ANSWER: B
+
+What is SQL Injection?
+A. Using parameters to take inputs from users.
+B. Insert a row into a table.
+C. Nesting a SELECT statement into another SELECT Statement
+D. Injecting a SQL Statement as user input.
+ANSWER: D
+
+Which is NOT a constraint in SQL?
+A. Unique
+B. Null
+C. Primary Key
+D. Foreign Key
+ANSWER: B
+
+What is the difference between MINUS and INTERSECT?
+A. MINUS returns only rows returned by both queries. INTERSECT returns only unique rows returned by the first query but not by the second.
+B. INTERSECT returns all rows returned by the first query. MINUS returns rows returned by the second query.
+C. INTERSECT returns duplicate rows from the table, where MINUS returns duplicate rows from the second.
+D. INTERSECT returns only rows returned by both queries. MINUS returns only unique rows returned by the first query but not by the second.
+ANSWER: D
+
+What is the difference between UNION and UNION ALL?
+A. UNION will join two tables, while UNION ALL joins all tables.
+B. UNION ALL returns only distinct rows, while UNION returns duplicate rows.
+C. UNION returns only distinct rows. While UNION ALL returns all rows.
+D. UNION ALL will join two tables, while UNION joins only rows in the tables.
+ANSWER: C
+
+What does ACID stand for?
+A. Atomicity, Compatible, Immutable, Durability
+B. Atomicity, Consistency, Isolation, Durability
+C. Authentic, Continuous, Isolation, Durability
+D. Automated, Compatible, Isolation, Deterministic
+ANSWER: B
+
+What are the different events in Triggers?
+A. Select, Commit
+B. Drop, Alter
+C. Insert, Update, Delete
+D. Define, Create
+ANSWER: C
+
+Which is not true about referential integrity?
+A. A row that is being referenced can be deleted before the referencing row
+B. A foreign key in any referencing table must always refer to a valid row in the referenced table
+C. Ensures that the relationship between two tables remains synchronized during updates and deletes
+D. Oracle supports referential integrity actions, such as DELETE CASCADE and DELETE SET NULL
+ANSWER: A
+
+A sequence is
+A. Used to track sequence values
+B. A group of operations meant to encapsulate a single task and must maintain ACID properties
+C. A column data type used to represent arrays
+D. The set of valid values in a BETWEEN clause
+ANSWER:  A
+
+The CHECK constraint is used to
+A. Filter selected rows with a logical expression
+B. Require any values placed in a row to satisfy a logical expression
+C. Require any values in a column to satisfy a logical expression
+D. Require new data to be manually checked after being commited
+ANSWER: C
+
+Which command is used for defining new tables or databases?
+A. DEFINE
+B. CREATE
+C. SELECT
+D. NEW
+ANSWER: B
+
+The SQL UPDATE statement can
+A. Update only one row at a time
+B. Update multiple rows at a time
+C. Delete a row based on a where clause
+D. Update the current system time of the database
+ANSWER: B
+
+Denormalization is
+A. The process of adding redundancy to a database
+B. Abstracting data
+C. Using triggers to automate tasks
+D. Putting the database in an exceptional state that prevents public access
+ANSWER: A
+
+Which of the following joins will return all records from the first table despite any condition specified?
+A. inner join
+B. left join
+C. right join
+D. complex join
+ANSWER: B
+
+Use the AS keyword to specify an alias
+A. True
+B. False
+ANSWER: A
+
+Which of the following clauses is used to filter the results of a statement? It can apply to a SELECT, UPDATE, or DELETE statement.
+A. HAVING
+B. WHERE
+C. GROUP BY
+D. ORDER BY
+ANSWER: B
+
+In a one-to-one relationship, you typically use a third table as an association or join table
+A. True
+B. False
+ANSWER: B
+
+Which normalized form introduces the concept of enforcing primary keys and removing composite columns?
+A. First
+B. Second
+C. Third
+D. Fourth
+ANSWER: A
+
+Which normalized form introduces the concept of removing duplicate data and creating separate tables for information?
+A. First
+B. Second
+C. Third
+D. Fourth
+ANSWER: B
+
+Which normalized form introduces the concept of removing columns whose values are derived from other columns in the table?
+A. First
+B. Second
+C. Third
+D. Fourth
+ANSWER: C
+
+Which of the following SQL datatypes is best used to represent a decimal number?
+A. INTEGER
+B. SMALLINT
+C. TIMESTAMP
+D. NUMBER
+ANSWER: D
+
+What is not true about user defined functions?
+A. A user defined function can be invoked within a stored procedure
+B. A user defined function can be invoked within another user defined function
+C. A stored procedure can be invoked within a user defined function
+D. User defined functions can invoke system defined functions such as SUM and AVG
+ANSWER: C
+
+What is the purpose of SQL indices?
+A. They allow random access to our tables
+B. They speed up queries for non unique columns of tables while slowing down inserts and deletes.
+C. They speed up inserts for non unique columns of tables while slowing down querying.
+D. They speed up all DML operations for our tables.
+ANSWER: B
+
+What is TRUE about IN and EXISTS?
+A. IN scans every record of a subquery whereas EXISTS stops searching as soon as it determines the scan as TRUE.
+B. IN is used for specifically for subqueries only whereas EXISTS is used for conditionals only.
+C. EXISTS is more efficient when the subquery is small while IN is more efficient if the subquery is large.
+D. IN and EXISTS are based around the same legacy model and therefore are the same.
+ANSWER: A
+
+A user defined function can include INSERT statements to insert records into a database.
+A. True
+B. False
+Answer: False

@@ -1,0 +1,133 @@
+{
+ "batchId": 1272,
+ "batch": "a193g00000293dqAAA",
+ "quizzes": [
+  {
+   "title": "Written evaluations",
+   "category": "Java",
+   "batchCurriculumActivityId": 210273,
+   "grades": [
+    {
+     "traineeId": 107650,
+     "trainee": "0030d00002OUxMcAAL",
+     "grade": 59.09
+    },
+    {
+     "traineeId": 113944,
+     "trainee": "0033g00000PMb9yAAD",
+     "grade": 75.64
+    },
+    {
+     "traineeId": 119568,
+     "trainee": "0033g00000WKZqNAAX",
+     "grade": 80
+    },
+    {
+     "traineeId": 129103,
+     "trainee": "0033g00000rgUH9AAM",
+     "grade": 71.09
+    },
+    {
+     "traineeId": 129335,
+     "trainee": "0033g00000rhJcAAAU",
+     "grade": 79.09
+    },
+    {
+     "traineeId": 136380,
+     "trainee": "0033g00001592gvAAA",
+     "grade": 72
+    },
+    {
+     "traineeId": 136897,
+     "trainee": "0033g000015929pAAA",
+     "grade": 79.09
+    },
+    {
+     "traineeId": 140281,
+     "trainee": "0033g000015AAXIAA4",
+     "grade": 78.18
+    },
+    {
+     "traineeId": 140425,
+     "trainee": "0033g00000x1q4dAAA",
+     "grade": 71.82
+    },
+    {
+     "traineeId": 140493,
+     "trainee": "0033g0000157xLCAAY",
+     "grade": 70.91
+    },
+    {
+     "traineeId": 140563,
+     "trainee": "0033g000018QykvAAC",
+     "grade": 81.82
+    },
+    {
+     "traineeId": 140577,
+     "trainee": "0033g000018R9q8AAC",
+     "grade": 88.18
+    },
+    {
+     "traineeId": 140599,
+     "trainee": "0033g00000rfJyjAAE",
+     "grade": 74.55
+    },
+    {
+     "traineeId": 140702,
+     "trainee": "0033g00000CpJaeAAF",
+     "grade": 90.91
+    },
+    {
+     "traineeId": 140704,
+     "trainee": "0033g0000158ASKAA2",
+     "grade": 61.82
+    },
+    {
+     "traineeId": 140716,
+     "trainee": "0033g0000057mKsAAI",
+     "grade": 62.91
+    },
+    {
+     "traineeId": 140919,
+     "trainee": "0033g0000159AumAAE",
+     "grade": 80.91
+    },
+    {
+     "traineeId": 140945,
+     "trainee": "0033g000018Qh0CAAS",
+     "grade": 80
+    },
+    {
+     "traineeId": 140999,
+     "trainee": "0033g000018RmaAAAS",
+     "grade": 90.91
+    },
+    {
+     "traineeId": 141067,
+     "trainee": "0033g000018RZtZAAW",
+     "grade": 79.09
+    },
+    {
+     "traineeId": 141136,
+     "trainee": "0033g000018S5WlAAK",
+     "grade": 74.55
+    },
+    {
+     "traineeId": 141145,
+     "trainee": "0030P00002GNkHqQAL",
+     "grade": 59.09
+    },
+    {
+     "traineeId": 141147,
+     "trainee": "0033g000011yyIgAAI",
+     "grade": 69.09
+    },
+    {
+     "traineeId": 141178,
+     "trainee": "0033g00000rfKGfAAM",
+     "grade": 72.73
+    }
+   ]
+  }
+ ]
+}

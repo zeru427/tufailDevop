@@ -1,0 +1,19 @@
+ # https://kubernetes.io/docs/concepts/services-networking/ingress/#the-ingress-resource
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: demo-service
+  namespace: helloapp
+spec:
+  rules:
+  - host: revatureapp1.com
+    http:
+      paths:
+      - path: /hello
+        pathType: Prefix
+        backend:
+          service:
+            name: demo-service
+            port:
+              number: 80

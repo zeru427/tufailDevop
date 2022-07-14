@@ -1,0 +1,68 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: devopsapp
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-deployment
+  namespace: devopsapp
+  labels:
+    app: demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo
+  template:
+    metadata:
+      labels:
+        app: demo
+    spec:
+      containers:
+      - name: demo
+        image: 8867205331/dockerhub:demoservice
+        ports:
+        - containerPort: 8080
+        #imagePullPolicy: Never
+        # livenessProbe:
+        # readinessProbe:
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo-service
+  namespace: devopsapp
+spec:
+  selector:
+    app: demo
+  ports:
+    - name: http
+      protocol : TCP
+      port: 80
+      targetPort: 8080
+  type: NodePort
+
+---
+ # https://kubernetes.io/docs/concepts/services-networking/ingress/#the-ingress-resource
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: demo-service
+  namespace: devopsapp
+spec:
+  rules:
+  - host: revatureapp2.com
+    http:
+      paths:
+      - path: /hello
+        pathType: Prefix
+        backend:
+          service:
+            name: demo-service
+            port:
+              number: 80

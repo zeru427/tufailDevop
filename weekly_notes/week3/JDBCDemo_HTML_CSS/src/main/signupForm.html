@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup Page</title>
+    <link rel="stylesheet"  type="text/css" href="styles.css" />
+</head>
+<body>
+<a href="index.html">Home</a>  |
+<a href="loginForm.html">Login</a>  |
+<a href="signupForm.html">Signup</a>  |
+<a href="aboutus.html">About Us</a> |
+<a href="contactus.html">Contact Us</a> |
+<a href="productDetails.html">Product Information</a> |
+<a href="productForm.html">Product Form</a> |
+
+<h1>Signup Page</h1>
+<form>
+    <table border="0" cellpadding="10" cellspacing="10" bgcolor="pink">
+        <tr>
+            <td><label>User Name</label></td>
+            <td><input type="text" id="username" name="username"></td>
+        </tr>
+        <tr>
+            <td><label>Password</label></td>
+            <td><input type="password" id="password" name="password"></td>
+        </tr>
+        <tr>
+            <td><label>Confirm Password</label></td>
+            <td><input type="password" id="confirmpassword" name="confirmpassword"></td>
+        </tr>
+        <tr>
+            <td><label>First Name</label></td>
+            <td><input type="text" id="firstname" name="firstname"></td>
+        </tr>
+
+        <!-- Gender  Radio buttons-->
+        <tr>
+            <td><label>Gender</label></td>
+            <td>
+                <input type="radio" id="gender1" name="gender">Male
+                <input type="radio" id="gender2" name="gender">Female
+                <input type="radio" id="gender3" name="gender">Others
+            </td>
+        </tr>
+
+        <!-- Notifications  checkbox-->
+        <tr>
+            <td><label>Notifications</label></td>
+            <td>
+                <input type="checkbox" id="notification1" name="notification">Email
+                <input type="checkbox" id="notification2" name="notification">SMS
+                <input type="checkbox" id="notification3" name="notification">Post
+            </td>
+        </tr>
+
+
+        <!-- Qualifications drop down-->
+        <tr>
+            <td><label>Highest Qualifications </label></td>
+            <td>
+                <select id="qual" name="qual" >
+                    <option>MCA</option>
+                    <option>MBA</option>
+                    <option>Masters</option>
+                    <option>Bachelor</option>
+                </select>
+            </td>
+        </tr>
+
+        <!-- Hobbies list box-->
+        <tr>
+            <td><label>Hobbies</label></td>
+            <td>
+                <select id="hobbies" name="hobbies"  >
+                    <option>Travelling</option>
+                    <option>Music</option>
+                    <option>Sports</option>
+                    <option>Reading</option>
+                </select>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td><input type="submit" value="Signup"></td>
+            <td><input type="reset" value="Clear"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

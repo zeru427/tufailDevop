@@ -1,0 +1,93 @@
+// Multiple choice: 10
+// T/F: 2
+// TOTAL: 12
+
+//GUID: b419b3e7-445b-424c-ba7a-1ec373ad2f1a
+::Which SQL sublanguage is used to define tables, schema, and databases?:: {
+=DDL
+~DML
+~DCL
+~TCL
+}
+
+//GUID: 8fbd2fa9-9a16-47cc-8170-8ccb566cc63f
+::Which SQL sublanguage is used to create and interact with rows in a table?:: {
+~DDL
+=DML
+~DCL
+~TCL
+}
+
+//GUID: 5e9e0675-865b-4908-96c2-dd2e24ec0339
+::Which SQL sublanguage is used to change database permissions?:: {
+~DDL
+~DML
+=DCL
+~TCL
+}
+
+//GUID: 74028f0d-e2f6-4388-9645-e4ff22d8307a
+::Which SQL sublanguage is used to manage the state of a transaction?:: {
+~DDL
+~DML
+~DCL
+=TCL
+}
+
+//GUID: 1746e9bb-70c7-4cf8-bb66-670997dcf922
+::Which SQL keyword is used for defining new tables or databases?:: {
+~DEFINE
+=CREATE
+~SELECT
+~NEW
+}
+
+//GUID: c7d5ddcc-0331-47fe-8229-5f05efd9859a
+::Which command dictates the amount of columns we get in a given query?:: {
+~WHERE
+=SELECT
+~HAVING
+~GROUP BY
+}
+
+//GUID: 2e93e85f-7ac8-41f1-8484-027788e8661c
+::Which command filters out records from the given query based on applying a condition to each and every record?:: {
+=WHERE.
+~SELECT.
+~HAVING.
+~GROUP BY.
+}
+
+//GUID: abde6ab8-6cfd-4f14-a833-87cc73d68636
+::What is the difference between WHERE and HAVING?:: {
+~HAVING performs a conditional check on each column to ensure datatypes are proper before a query executes, whereas WHERE applies immediately.
+~Both can be used interchangeably, it is just a means to apply multiple filter conditions.
+~Simply put, HAVING will ensure a specific order for the data after the WHERE clause applies, whereas WHERE by itself does not order at all.
+=WHERE applies a condition to all records individually, whereas HAVING applies to groupings of records.
+}
+
+//GUID: 8f23bfaa-f659-4ca3-a1d7-f199c2cd7d26
+::Scalar functions are used to search through a database and give a result based on conditions.:: {
+FALSE
+}
+
+//GUID: a7dea7fd-8fba-4264-97f9-c404122f9203
+::Scalar functions are used to perform an operation on values returned from a query.:: {
+TRUE
+}
+
+//GUID: 5f65296f-7094-4195-a7ff-c23f3559b3f2
+::Which aggregate function is used to combine values into a number representing the number of total values?:: {
+~MAX
+~SUM
+=COUNT
+~MIN
+}
+
+//GUID: 91b85ff7-25b8-4e44-a029-2510a8e41d1e
+::Which aggregate function is used to combine values into a number representing the combination of all of the values?:: {
+~MAX
+=SUM
+~COUNT
+~MIN
+}

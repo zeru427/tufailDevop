@@ -1,0 +1,99 @@
+S:No
+
+Candidate Name
+
+Technology
+
+Interview questions
+
+1
+
+Alex Jervis
+
+Python DevOps/SRE
+
+Demo your project?
+Explain pipeline?
+Experience in other technologies?
+
+2
+
+Arek Tecimler
+
+Python DevOps/SRE
+
+There were several questions about the pipeline I built from the assessment,
+some soft skill questions like “tell me about yourself”,
+“Are you familiar with other DevOps tools similar to Azure DevOps?”
+“what’s the difference between Ansible and Jenkins?”
+“Are you familiar with other containerization tools aside from Docker?”
+“Are you familiar with other static analysis tools besides SonarCloud?”
+“What is the purpose of static analysis tools? What business purpose do they server?”
+
+3
+
+David Rodriguez
+
+Python DevOps/SRE
+
+• How does your pipeline work?
+• Why did you use a multi-stage dockerfile?
+• How would you convert that to only use one image?
+• How did you store you access tokens?
+• How would you handle versioning of your tags using Docker?
+• How did you set up the SonarQube analysis
+
+4
+
+Jacob Bulloch
+
+Python DevOps/SRE
+
+The interview focused entirely on the exercise and my solutions.  He asked about my strategy for tagging my Docker images in the pipeline, my multi-stage Dockerfile strategy, and asked to see my setup for static analysis and the results on SonarCloud.
+
+All in all, I would say that he was mostly interested in the reasons that I chose the solutions that I did and my ability to explain those design choices.
+
+He also disclosed that he was impressed that I was able to meet all of the stated goals in the time allotted time; he said that they did not expect any of us to actually finish the exercise.
+
+My understanding of a multi-stage build and how and why to use it seemed to impress him particularly.
+
+5
+
+James Bromfield
+
+Python DevOps/SRE
+
+Interviewer asked me to describe the process I used to complete the exercise. Specifically, I was asked how to better secure the Docker images I pushed to a public repository, and when and why Helm should be implemented instead of using Kubernetes manifests.
+
+6
+
+Michael Darmawan
+
+Python DevOps/SRE
+
+Tell me about yourself.
+Why did you decide to go into a tech job even though you were a Neuroscience major?
+
+Could you present your pipeline to me? (and subsequent pipeline-specific questions)
+  - the pipeline was a part of a 3 hour coding exercise we had to complete beforehand
+
+7
+
+Moonjun Chung
+
+Python DevOps/SRE
+
+Tell me about what you have done for your interview project.
+What is a service?
+Do you know what an Ingress is?
+What is the load balancer doing?
+What's the purpose of the selector in a kubernetes manifest?
+Tell me more about the purpose of specifying ports and target ports.
+
+8
+
+Richard Hawkins
+
+Python DevOps/SRE
+
+We discussed repo branching strategies (did you follow a branching strategy in your assessment?), discussed the quality enforcement that devops can bring to a project (what are some checks that you would put on a quality gate to ensure good code is being deployed?), and talked about ways to design a pipeline to ensure new code integrates smoothly (how would you set up a pipeline to build and deploy new code?)

@@ -1,0 +1,32 @@
+Core Java
+========================
+What are primitive data types?
+what is difference between float and double?
+What is exception handling ?
+what is try catch?
+what are the different was try catch and throw are used and what are the differences?
+If there is no code in the try block what happens with the catch and finally?
+(And alot more qustions on exception handling lots of scenorios what if this happened what would happen then situations)
+Garbage Collection 
+how GC work with exception handling?
+What is String and String Buffer?
+What is static?
+=================
+What is the difference between static and final variable?
+If your given insatnce variable, static variable ,and local variable where would you plase them?
+What scopes would the above variables belong to?
+How and where could you access those variables?
+Do you know about Collections?
+What is the difference between List and Set?
+What is the difference between Array and ArrayList?
+Have you used Hash map if so how do you use it?
+What is a constructor?
+What do you place inside a constructor?
+Hos do you call Srings?
+What is the difference bewteen the two methods of calling Stirngs?
+Asked me to expain each individual part of public void static main method
+-------------------------
+
+6. What is Agile/Scrum/Waterfall
+7. Core Java, they asked me what is static keyword
+
